@@ -1,0 +1,28 @@
+@import "reset.scss";
+// Typography
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap");
+// Headings, Call-to-actions, Header Navigation
+$font-heading: "Raleway", sans-serif;
+// Body
+$font-body: "Open Sans", sans-serif;
+// Colors
+// Primary
+$Dark-Blue-bg-intro: hsl(217, 28%, 15%);
+$Dark-Blue-bg-main: hsl(218, 28%, 13%);
+$Dark-Blue-bg-footer: hsl(216, 53%, 9%);
+$Dark-Blue-bg-testimonials: hsl(219, 30%, 18%);
+
+// Accent
+
+$gradient: linear-gradient(
+  155deg,
+  rgba(101, 226, 217, 1) 0%,
+  rgba(51, 158, 204, 1) 100%
+);
+$Light-Red: hsl(0, 100%, 63%);
+
+// Neutral
+
+$White: hsl(0, 0%, 100%);
+
+// Icons
