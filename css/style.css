@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap");
 html {
   box-sizing: border-box;
-  font-size: 17px;
-  line-height: 1.5em;
+  font-size: 14px;
+  line-height: 1.4em;
   scroll-behavior: smooth; }
 
 *,
@@ -12,11 +12,22 @@ html {
 
 ol,
 ul {
-  list-style: none; }
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+a {
+  color: inherit;
+  text-decoration: none;
+  font-size: inherit; }
 
 img {
   max-width: 100%;
   height: auto; }
+
+body {
+  margin: 0;
+  padding: 0; }
 
 /* Forms */
 button,
@@ -38,22 +49,22 @@ select {
   text-transform: none; }
 
 button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
   -webkit-appearance: button; }
 
 button::-moz-focus-inner,
-[type='button']::-moz-focus-inner,
-[type='reset']::-moz-focus-inner,
-[type='submit']::-moz-focus-inner {
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
   border-style: none;
   padding: 0; }
 
 button:-moz-focusring,
-[type='button']:-moz-focusring,
-[type='reset']:-moz-focusring,
-[type='submit']:-moz-focusring {
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText; }
 
 fieldset {
@@ -67,11 +78,150 @@ legend {
   padding: 0;
   white-space: normal; }
 
-[type='checkbox'],
-[type='radio'] {
+[type="checkbox"],
+[type="radio"] {
   box-sizing: border-box;
   padding: 0; }
 
-[type='number']::-webkit-inner-spin-button,
-[type='number']::-webkit-outer-spin-button {
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
   height: auto; }
+
+body {
+  background: #181f2a;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  line-height: 1.6; }
+
+h1,
+h2,
+h3 {
+  font-family: "Raleway", sans-serif; }
+
+h1 {
+  font-size: 1.6rem; }
+
+h2 {
+  font-size: 1.3rem; }
+
+h3 {
+  font-size: 0.7rem; }
+
+nav {
+  background: #1c2431;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.8rem 1.4rem; }
+  nav img {
+    width: 5.7rem; }
+  nav ul {
+    display: flex; }
+    nav ul li {
+      margin-left: 1.6rem; }
+      nav ul li a {
+        font-size: smaller; }
+
+header {
+  background: #1c2431; }
+
+header,
+section {
+  padding: 1.5rem; }
+
+section {
+  margin: 6rem 0; }
+  section.features .features-card {
+    margin-bottom: 5rem; }
+    section.features .features-card img {
+      width: 4.2rem; }
+  section.productivity p {
+    text-align: left; }
+  section.productivity a {
+    color: #65e2d9;
+    font-size: smaller;
+    text-decoration: underline;
+    text-underline-offset: 0.5rem; }
+  section.testimonials img.quote {
+    width: 1.5rem;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: -1rem;
+    top: -1.3rem; }
+  section.testimonials .card {
+    background: #202a3c;
+    padding: 1rem 1.5rem 0.8rem;
+    margin: 0 1.8rem 1.8rem;
+    border-radius: 0.3rem;
+    text-align: left;
+    font-size: 0.7rem; }
+    section.testimonials .card p {
+      line-height: 1.8;
+      margin-top: 0; }
+    section.testimonials .card h3 {
+      margin-bottom: 0; }
+    section.testimonials .card:first-of-type {
+      padding-top: 0rem; }
+    section.testimonials .card img.profile-img {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 1rem;
+      margin-right: 0.6rem; }
+    section.testimonials .card .profile {
+      display: flex;
+      align-items: center; }
+  section.access {
+    background: #202a3c;
+    margin: 1.5rem; }
+    section.access form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      section.access form input {
+        font-size: 0.7rem;
+        margin: 1.6rem 0; }
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background: #0b1523;
+  text-align: left;
+  padding: 3rem; }
+  footer img {
+    width: 13rem;
+    margin-bottom: 3rem; }
+  footer .footer-1 {
+    display: flex;
+    margin-bottom: 0; }
+    footer .footer-1 p {
+      margin-top: 0; }
+    footer .footer-1 .fas {
+      margin: 0.4rem 2rem 0 0; }
+  footer .footer-2 .fas {
+    margin-right: 1rem; }
+  footer > div {
+    margin-bottom: 5rem; }
+  footer ul li {
+    margin: 1rem 0; }
+  footer .footer-5 {
+    text-align: center;
+    font-size: 1.8rem; }
+    footer .footer-5 .fab {
+      margin: 0 0.2rem; }
+
+button,
+input {
+  padding: 1.3rem 1.6rem;
+  border: none;
+  width: 90%;
+  border-radius: 2rem; }
+  button a,
+  input a {
+    color: white;
+    font-weight: 700; }
+
+button {
+  background: linear-gradient(155deg, #65e2d9 0%, #339ecc 100%); }

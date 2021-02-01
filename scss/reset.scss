@@ -1,24 +1,37 @@
 html {
-	box-sizing: border-box;
-	font-size: 17px;
-	line-height: 1.5em;
-	scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 1.4em;
+  scroll-behavior: smooth;
 }
 
 *,
 *:before,
 *:after {
-	box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 ol,
 ul {
-	list-style: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  font-size: inherit;
 }
 
 img {
-	max-width: 100%;
-	height: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  margin: 0;
+  padding: 0;
 }
 
 /* Forms */
@@ -28,64 +41,64 @@ input,
 optgroup,
 select,
 textarea {
-	font-family: inherit;
-	font-size: 100%;
-	line-height: 1.15;
-	margin: 0;
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
 }
 
 button,
 input {
-	overflow: visible;
+  overflow: visible;
 }
 
 button,
 select {
-	text-transform: none;
+  text-transform: none;
 }
 
 button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
-	-webkit-appearance: button;
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
 }
 
 button::-moz-focus-inner,
-[type='button']::-moz-focus-inner,
-[type='reset']::-moz-focus-inner,
-[type='submit']::-moz-focus-inner {
-	border-style: none;
-	padding: 0;
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
 }
 
 button:-moz-focusring,
-[type='button']:-moz-focusring,
-[type='reset']:-moz-focusring,
-[type='submit']:-moz-focusring {
-	outline: 1px dotted ButtonText;
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
 }
 
 fieldset {
-	padding: 0.35em 0.75em 0.625em;
+  padding: 0.35em 0.75em 0.625em;
 }
 
 legend {
-	box-sizing: border-box;
-	color: inherit;
-	display: table;
-	max-width: 100%;
-	padding: 0;
-	white-space: normal;
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
 }
 
-[type='checkbox'],
-[type='radio'] {
-	box-sizing: border-box;
-	padding: 0;
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
 }
 
-[type='number']::-webkit-inner-spin-button,
-[type='number']::-webkit-outer-spin-button {
-	height: auto;
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
 }
