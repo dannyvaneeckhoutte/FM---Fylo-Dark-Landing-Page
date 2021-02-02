@@ -89,7 +89,7 @@ legend {
 
 body {
   background: #181f2a;
-  color: white;
+  color: #ffffff;
   font-family: "Open Sans", sans-serif;
   text-align: center;
   line-height: 1.6; }
@@ -100,7 +100,7 @@ h3 {
   font-family: "Raleway", sans-serif; }
 
 h1 {
-  font-size: 1.8rem; }
+  font-size: 2.2rem; }
 
 h2 {
   font-size: 1.3rem; }
@@ -117,7 +117,7 @@ nav {
     nav {
       padding: 2.4rem; } }
   nav img {
-    width: 10rem; }
+    width: 9rem; }
   nav ul {
     display: flex; }
     nav ul li {
@@ -142,8 +142,10 @@ header {
     padding: 1.8rem; }
     @media only screen and (min-width: 768px) {
       header .intro {
-        max-width: 36rem;
+        max-width: 45rem;
         margin: 0 auto; } }
+    header .intro button {
+      margin-top: 1rem; }
 
 header,
 section {
@@ -153,7 +155,7 @@ main {
   max-width: 1440px;
   margin: 0 auto; }
   main section {
-    padding: 6rem 2rem; }
+    padding: 4rem; }
     @media only screen and (min-width: 768px) {
       main section.features {
         display: grid;
@@ -181,6 +183,8 @@ main {
         font-size: smaller;
         text-decoration: underline;
         text-underline-offset: 0.5rem; }
+        main section.productivity a:hover {
+          color: #ffffff; }
     @media only screen and (min-width: 768px) {
       main section.testimonials {
         display: flex;
@@ -188,12 +192,13 @@ main {
         main section.testimonials .card {
           max-width: 20rem; } }
     main section.testimonials img.quote {
-      width: 1.5rem;
+      width: 3rem;
       margin: 0;
       padding: 0;
       position: relative;
-      left: -1rem;
-      top: -1.3rem; }
+      z-index: -1;
+      left: -2rem;
+      top: -2rem; }
     main section.testimonials .card {
       background: #202a3c;
       padding: 1rem 1.5rem 0.8rem;
@@ -220,6 +225,7 @@ main {
       padding: 0 3rem; }
       main section.access .access-card {
         background: #202a3c;
+        box-shadow: 6px 6px 3px rgba(3, 5, 7, 0.3);
         max-width: 54rem;
         margin: 0 auto;
         padding: 1.5rem;
@@ -272,17 +278,20 @@ footer {
     footer .footer-wrapper > div {
       margin-bottom: 5rem; }
     footer .footer-wrapper ul li {
-      margin: 0; }
+      margin: 0 0 0.7rem 0; }
     footer .footer-wrapper .footer-5 {
       text-align: center;
       font-size: 1.8rem; }
       footer .footer-wrapper .footer-5 .fab {
-        margin: 0 0.2rem; }
+        margin: 0 0.5rem;
+        cursor: pointer; }
+        footer .footer-wrapper .footer-5 .fab:hover {
+          color: #65e2d9; }
     @media only screen and (min-width: 768px) {
       footer .footer-wrapper {
         display: grid;
-        grid-template-columns: 3fr 2fr 1fr 1fr 1fr;
-        gap: 1.6rem;
+        grid-template-columns: 2fr 2fr 1fr 1fr 2fr;
+        gap: 4rem;
         justify-content: space-between; } }
   footer a:hover {
     font-weight: bolder; }
@@ -295,7 +304,7 @@ input {
   border-radius: 2rem; }
   button a,
   input a {
-    color: white;
+    color: #ffffff;
     font-weight: 700; }
 
 button {

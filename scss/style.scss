@@ -1,301 +1,310 @@
 @import "reset.scss";
+
 // Typography
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap");
 // Headings, Call-to-actions, Header Navigation
 $font-heading: "Raleway", sans-serif;
 // Body
 $font-body: "Open Sans", sans-serif;
-// Colors
-// Primary
-$Dark-Blue-bg-intro: hsl(217, 28%, 15%);
-$Dark-Blue-bg-main: hsl(218, 28%, 13%);
-$Dark-Blue-bg-footer: hsl(216, 53%, 9%);
-$Dark-Blue-bg-testimonials: hsl(219, 30%, 18%);
 
-// Accent
-
+// Colors Primary
+$Dark-Blue-bg-intro: #1c2431;
+$Dark-Blue-bg-main: #181f2a;
+$Dark-Blue-bg-footer: #0b1523;
+$Dark-Blue-bg-testimonials: #202a3c;
+// Colors Accent
 $gradient: linear-gradient(155deg, #65e2d9 0%, #339ecc 100%);
 $link-green: #65e2d9;
-$Light-Red: hsl(0, 100%, 63%);
+// Colors Neutral
+$White: #ffffff;
+$shadow: rgba(3, 5, 7, 0.3);
 
-// Neutral
-
-$White: hsl(0, 0%, 100%);
-
+// Styling
 body {
-  background: $Dark-Blue-bg-main;
-  color: $White;
-  font-family: $font-body;
-  text-align: center;
-  line-height: 1.6;
+	background: $Dark-Blue-bg-main;
+	color: $White;
+	font-family: $font-body;
+	text-align: center;
+	line-height: 1.6;
 }
 
 h1,
 h2,
 h3 {
-  font-family: $font-heading;
+	font-family: $font-heading;
 }
 h1 {
-  font-size: 1.8rem;
+	font-size: 2.2rem;
 }
 
 h2 {
-  font-size: 1.3rem;
+	font-size: 1.3rem;
 }
 
 h3 {
-  font-size: 0.7rem;
+	font-size: 0.7rem;
 }
 
 nav {
-  //   background: $Dark-Blue-bg-intro;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.8rem 1.4rem;
-  @media only screen and (min-width: 768px) {
-    padding: 2.4rem;
-  }
-  img {
-    width: 10rem;
-  }
-  ul {
-    display: flex;
-    li {
-      padding-left: 1.6rem;
-      a {
-        font-size: smaller;
-        display: inline-block;
-        &:hover {
-          text-decoration: underline;
-          font-weight: bolder;
-        }
-      }
-    }
-  }
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.8rem 1.4rem;
+	@media only screen and (min-width: 768px) {
+		padding: 2.4rem;
+	}
+	img {
+		width: 9rem;
+	}
+	ul {
+		display: flex;
+		li {
+			padding-left: 1.6rem;
+			a {
+				font-size: smaller;
+				display: inline-block;
+				&:hover {
+					text-decoration: underline;
+					font-weight: bolder;
+				}
+			}
+		}
+	}
 }
 header {
-  background-image: url(../images/bg-curvy-mobile.svg);
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: 100vw;
-  background-color: $Dark-Blue-bg-intro;
-  @media only screen and (min-width: 768px) {
-    background-image: url(../images/bg-curvy-desktop.svg);
-  }
-  .intro {
-    padding: 1.8rem;
-    @media only screen and (min-width: 768px) {
-      max-width: 36rem;
-      margin: 0 auto;
-    }
-  }
+	background-image: url(../images/bg-curvy-mobile.svg);
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-size: 100vw;
+	background-color: $Dark-Blue-bg-intro;
+	@media only screen and (min-width: 768px) {
+		background-image: url(../images/bg-curvy-desktop.svg);
+	}
+	.intro {
+		padding: 1.8rem;
+		@media only screen and (min-width: 768px) {
+			max-width: 45rem;
+			margin: 0 auto;
+		}
+		button {
+			margin-top: 1rem;
+		}
+	}
 }
 header,
 section {
-  padding: 1.5rem;
+	padding: 1.5rem;
 }
 
 main {
-  max-width: 1440px;
-  margin: 0 auto;
-  section {
-    padding: 6rem 2rem;
-    &.features {
-      @media only screen and (min-width: 768px) {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 5rem;
-        max-width: 60%;
-        margin: 0 auto;
-      }
-      .features-card {
-        margin-bottom: 5rem;
-        img {
-          height: 4.2rem;
-        }
-      }
-    }
-    &.productivity {
-      text-align: left;
-      @media only screen and (min-width: 768px) {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-        max-width: 80%;
-      }
-      a {
-        color: $link-green;
-        font-size: smaller;
-        text-decoration: underline;
-        text-underline-offset: 0.5rem;
-      }
-    }
-    &.testimonials {
-      @media only screen and (min-width: 768px) {
-        display: flex;
-        justify-content: center;
-        .card {
-          max-width: 20rem;
-        }
-      }
-      img.quote {
-        width: 1.5rem;
-        margin: 0;
-        padding: 0;
-        position: relative;
-        left: -1rem;
-        top: -1.3rem;
-      }
-      .card {
-        background: $Dark-Blue-bg-testimonials;
-        padding: 1rem 1.5rem 0.8rem;
-        margin: 0 1.8rem 1.8rem;
-        border-radius: 0.3rem;
-        text-align: left;
-        font-size: 0.7rem;
-        p {
-          line-height: 1.8;
-          margin-top: 0;
-        }
-        h3 {
-          margin-bottom: 0;
-        }
-        &:first-of-type {
-          padding-top: 0rem;
-        }
-        img.profile-img {
-          width: 2rem;
-          height: 2rem;
-          border-radius: 1rem;
-          margin-right: 0.6rem;
-        }
-        .profile {
-          display: flex;
-          align-items: center;
-        }
-      }
-    }
-    &.access {
-      padding: 0 3rem;
-      .access-card {
-        background: $Dark-Blue-bg-testimonials;
-        max-width: 54rem;
-        margin: 0 auto;
-        padding: 1.5rem;
-        position: relative;
-        bottom: -10rem;
-        form {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          margin: 0 auto;
-          input {
-            font-size: 0.7rem;
-            margin: 1.6rem 0;
-          }
-          @media only screen and (min-width: 768px) {
-            // width: 30rem;
-            flex-direction: row;
-            input {
-              flex-grow: 2;
-              margin-right: 2rem;
-            }
-          }
-        }
-        @media only screen and (min-width: 768px) {
-          padding: 2rem 4rem 1rem;
-        }
-      }
-    }
-  }
+	max-width: 1440px;
+	margin: 0 auto;
+	section {
+		padding: 4rem;
+		&.features {
+			@media only screen and (min-width: 768px) {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 5rem;
+				max-width: 60%;
+				margin: 0 auto;
+			}
+			.features-card {
+				margin-bottom: 5rem;
+				img {
+					height: 4.2rem;
+				}
+			}
+		}
+		&.productivity {
+			text-align: left;
+			@media only screen and (min-width: 768px) {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 4rem;
+				justify-content: center;
+				align-items: center;
+				margin: 0 auto;
+				max-width: 80%;
+			}
+			a {
+				color: $link-green;
+				font-size: smaller;
+				text-decoration: underline;
+				text-underline-offset: 0.5rem;
+				&:hover {
+					color: $White;
+				}
+			}
+		}
+		&.testimonials {
+			@media only screen and (min-width: 768px) {
+				display: flex;
+				justify-content: center;
+				.card {
+					max-width: 20rem;
+				}
+			}
+			img.quote {
+				width: 3rem;
+				margin: 0;
+				padding: 0;
+				position: relative;
+				z-index: -1;
+				left: -2rem;
+				top: -2rem;
+			}
+			.card {
+				background: $Dark-Blue-bg-testimonials;
+				padding: 1rem 1.5rem 0.8rem;
+				margin: 0 1.8rem 1.8rem;
+				border-radius: 0.3rem;
+				text-align: left;
+				font-size: 0.7rem;
+				p {
+					line-height: 1.8;
+					margin-top: 0;
+				}
+				h3 {
+					margin-bottom: 0;
+				}
+				&:first-of-type {
+					padding-top: 0rem;
+				}
+				img.profile-img {
+					width: 2rem;
+					height: 2rem;
+					border-radius: 1rem;
+					margin-right: 0.6rem;
+				}
+				.profile {
+					display: flex;
+					align-items: center;
+				}
+			}
+		}
+		&.access {
+			padding: 0 3rem;
+			.access-card {
+				background: $Dark-Blue-bg-testimonials;
+				box-shadow: 6px 6px 3px $shadow;
+				max-width: 54rem;
+				margin: 0 auto;
+				padding: 1.5rem;
+				position: relative;
+				bottom: -10rem;
+				form {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					margin: 0 auto;
+					input {
+						font-size: 0.7rem;
+						margin: 1.6rem 0;
+					}
+					@media only screen and (min-width: 768px) {
+						// width: 30rem;
+						flex-direction: row;
+						input {
+							flex-grow: 2;
+							margin-right: 2rem;
+						}
+					}
+				}
+				@media only screen and (min-width: 768px) {
+					padding: 2rem 4rem 1rem;
+				}
+			}
+		}
+	}
 }
 
 footer {
-  text-align: left;
-  padding: 14rem 3rem 3rem;
-  background: $Dark-Blue-bg-footer;
-  .footer-content {
-    @media only screen and (min-width: 1440px) {
-      max-width: 1440px;
-      margin: 0 auto;
-    }
-  }
-  img {
-    max-width: 8rem;
-    margin-bottom: 3rem;
-  }
-  .footer-wrapper {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    margin-top: 1rem;
+	text-align: left;
+	padding: 14rem 3rem 3rem;
+	background: $Dark-Blue-bg-footer;
+	.footer-content {
+		@media only screen and (min-width: 1440px) {
+			max-width: 1440px;
+			margin: 0 auto;
+		}
+	}
+	img {
+		max-width: 8rem;
+		margin-bottom: 3rem;
+	}
+	.footer-wrapper {
+		display: flex;
+		flex-direction: column;
+		text-align: left;
+		margin-top: 1rem;
 
-    .footer-1 {
-      display: flex;
-      margin-bottom: 0;
-      p {
-        margin-top: 0;
-      }
-      .fas {
-        margin: 0.4rem 2rem 0 0;
-      }
-    }
-    .footer-2 {
-      .fas {
-        margin-right: 1rem;
-      }
-    }
-    > div {
-      margin-bottom: 5rem;
-    }
-    ul {
-      li {
-        margin: 0;
-      }
-    }
-    .footer-5 {
-      text-align: center;
-      font-size: 1.8rem;
-      .fab {
-        margin: 0 0.2rem;
-      }
-    }
+		.footer-1 {
+			display: flex;
+			margin-bottom: 0;
+			p {
+				margin-top: 0;
+			}
+			.fas {
+				margin: 0.4rem 2rem 0 0;
+			}
+		}
+		.footer-2 {
+			.fas {
+				margin-right: 1rem;
+			}
+		}
+		> div {
+			margin-bottom: 5rem;
+		}
+		ul {
+			li {
+				margin: 0 0 0.7rem 0;
+			}
+		}
+		.footer-5 {
+			text-align: center;
+			font-size: 1.8rem;
+			.fab {
+				margin: 0 0.5rem;
+				cursor: pointer;
+				&:hover {
+					color: $link-green;
+				}
+			}
+		}
 
-    @media only screen and (min-width: 768px) {
-      display: grid;
-      grid-template-columns: 3fr 2fr 1fr 1fr 1fr;
-      gap: 1.6rem;
-      justify-content: space-between;
-    }
-  }
-  a {
-    &:hover {
-      font-weight: bolder;
-    }
-  }
+		@media only screen and (min-width: 768px) {
+			display: grid;
+			grid-template-columns: 2fr 2fr 1fr 1fr 2fr;
+			gap: 4rem;
+			justify-content: space-between;
+		}
+	}
+	a {
+		&:hover {
+			font-weight: bolder;
+		}
+	}
 }
 
 button,
 input {
-  padding: 1.1rem 1.6rem;
-  border: none;
-  width: 16rem;
-  border-radius: 2rem;
-  a {
-    color: $White;
-    font-weight: 700;
-  }
+	padding: 1.1rem 1.6rem;
+	border: none;
+	width: 16rem;
+	border-radius: 2rem;
+	a {
+		color: $White;
+		font-weight: 700;
+	}
 }
 button {
-  background: $gradient;
-  cursor: pointer;
-  transition: all 0.1s;
-  &:hover {
-    background: $link-green;
-  }
+	background: $gradient;
+	cursor: pointer;
+	transition: all 0.1s;
+	&:hover {
+		background: $link-green;
+	}
 }
