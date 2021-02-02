@@ -88,7 +88,7 @@ legend {
   height: auto; }
 
 body {
-  background: #181f2a;
+  background: #1c2431;
   color: white;
   font-family: "Open Sans", sans-serif;
   text-align: center;
@@ -108,12 +108,18 @@ h2 {
 h3 {
   font-size: 0.7rem; }
 
+main {
+  background-color: #181f2a; }
+
 nav {
   background: #1c2431;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.8rem 1.4rem; }
+  @media only screen and (min-width: 768px) {
+    nav {
+      padding: 3.5rem; } }
   nav img {
     width: 5.7rem; }
   nav ul {
@@ -124,25 +130,55 @@ nav {
         font-size: smaller; }
 
 header {
-  background: #1c2431; }
+  background-image: url(../images/bg-curvy-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100vw;
+  background-color: #1c2431; }
+  @media only screen and (min-width: 768px) {
+    header {
+      background-image: url(../images/bg-curvy-desktop.svg); } }
+  header .intro {
+    padding: 1.8rem; }
+    @media only screen and (min-width: 768px) {
+      header .intro {
+        max-width: 36rem;
+        margin: 0 auto; } }
 
 header,
 section {
   padding: 1.5rem; }
 
 section {
-  margin: 6rem 0; }
+  padding: 6rem 2rem;
+  background: #181f2a; }
+  @media only screen and (min-width: 768px) {
+    section.features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      max-width: 60%;
+      margin: 0 auto; } }
   section.features .features-card {
     margin-bottom: 5rem; }
     section.features .features-card img {
-      width: 4.2rem; }
-  section.productivity p {
+      height: 4.2rem; }
+  section.productivity {
     text-align: left; }
-  section.productivity a {
-    color: #65e2d9;
-    font-size: smaller;
-    text-decoration: underline;
-    text-underline-offset: 0.5rem; }
+    @media only screen and (min-width: 768px) {
+      section.productivity {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        max-width: 80%; } }
+    section.productivity a {
+      color: #65e2d9;
+      font-size: smaller;
+      text-decoration: underline;
+      text-underline-offset: 0.5rem; }
   section.testimonials img.quote {
     width: 1.5rem;
     margin: 0;
@@ -172,17 +208,18 @@ section {
     section.testimonials .card .profile {
       display: flex;
       align-items: center; }
-  section.access {
+  section.access .access-card {
     background: #202a3c;
-    margin: 1.5rem; }
-    section.access form {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center; }
-      section.access form input {
-        font-size: 0.7rem;
-        margin: 1.6rem 0; }
+    margin: 1.5rem;
+    padding: 1.5rem; }
+  section.access form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    section.access form input {
+      font-size: 0.7rem;
+      margin: 1.6rem 0; }
 
 footer {
   display: flex;
@@ -214,9 +251,9 @@ footer {
 
 button,
 input {
-  padding: 1.3rem 1.6rem;
+  padding: 1.1rem 1.6rem;
   border: none;
-  width: 90%;
+  width: 16rem;
   border-radius: 2rem; }
   button a,
   input a {

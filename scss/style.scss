@@ -23,7 +23,7 @@ $Light-Red: hsl(0, 100%, 63%);
 $White: hsl(0, 0%, 100%);
 
 body {
-  background: $Dark-Blue-bg-main;
+  background: $Dark-Blue-bg-intro;
   color: $White;
   font-family: $font-body;
   text-align: center;
@@ -47,12 +47,19 @@ h3 {
   font-size: 0.7rem;
 }
 
+main {
+  background-color: $Dark-Blue-bg-main;
+}
+
 nav {
   background: $Dark-Blue-bg-intro;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.8rem 1.4rem;
+  @media only screen and (min-width: 768px) {
+    padding: 3.5rem;
+  }
   img {
     width: 5.7rem;
   }
@@ -67,11 +74,21 @@ nav {
   }
 }
 header {
-  background: $Dark-Blue-bg-intro;
-  //   background-image: url(../images/bg-curvy-mobile.svg);
-  //   background-repeat: no-repeat;
-  //   background-position-x: center;
-  //   background-position-y: bottom;
+  background-image: url(../images/bg-curvy-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100vw;
+  background-color: $Dark-Blue-bg-intro;
+  @media only screen and (min-width: 768px) {
+    background-image: url(../images/bg-curvy-desktop.svg);
+  }
+  .intro {
+    padding: 1.8rem;
+    @media only screen and (min-width: 768px) {
+      max-width: 36rem;
+      margin: 0 auto;
+    }
+  }
 }
 header,
 section {
@@ -79,18 +96,33 @@ section {
 }
 
 section {
-  margin: 6rem 0;
+  padding: 6rem 2rem;
+  background: $Dark-Blue-bg-main;
   &.features {
+    @media only screen and (min-width: 768px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      max-width: 60%;
+      margin: 0 auto;
+    }
     .features-card {
       margin-bottom: 5rem;
       img {
-        width: 4.2rem;
+        height: 4.2rem;
       }
     }
   }
   &.productivity {
-    p {
-      text-align: left;
+    text-align: left;
+    @media only screen and (min-width: 768px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      max-width: 80%;
     }
     a {
       color: $link-green;
@@ -139,8 +171,11 @@ section {
     }
   }
   &.access {
-    background: $Dark-Blue-bg-testimonials;
-    margin: 1.5rem;
+    .access-card {
+      background: $Dark-Blue-bg-testimonials;
+      margin: 1.5rem;
+      padding: 1.5rem;
+    }
     form {
       display: flex;
       flex-direction: column;
@@ -198,9 +233,9 @@ footer {
 
 button,
 input {
-  padding: 1.3rem 1.6rem;
+  padding: 1.1rem 1.6rem;
   border: none;
-  width: 90%;
+  width: 16rem;
   border-radius: 2rem;
   a {
     color: $White;
