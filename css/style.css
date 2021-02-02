@@ -100,7 +100,7 @@ h3 {
   font-family: "Raleway", sans-serif; }
 
 h1 {
-  font-size: 1.6rem; }
+  font-size: 1.8rem; }
 
 h2 {
   font-size: 1.3rem; }
@@ -117,7 +117,7 @@ nav {
     nav {
       padding: 2.4rem; } }
   nav img {
-    width: 5.7rem; }
+    width: 10rem; }
   nav ul {
     display: flex; }
     nav ul li {
@@ -246,20 +246,20 @@ main {
 
 footer {
   text-align: left;
-  padding: 20rem 3rem 3rem;
+  padding: 14rem 3rem 3rem;
   background: #0b1523; }
   @media only screen and (min-width: 1440px) {
     footer .footer-content {
       max-width: 1440px;
       margin: 0 auto; } }
+  footer img {
+    max-width: 8rem;
+    margin-bottom: 3rem; }
   footer .footer-wrapper {
     display: flex;
     flex-direction: column;
     text-align: left;
     margin-top: 1rem; }
-    footer .footer-wrapper img {
-      width: 13rem;
-      margin-bottom: 3rem; }
     footer .footer-wrapper .footer-1 {
       display: flex;
       margin-bottom: 0; }
@@ -282,7 +282,7 @@ footer {
       footer .footer-wrapper {
         display: grid;
         grid-template-columns: 3fr 2fr 1fr 1fr 1fr;
-        gap: 2rem;
+        gap: 1.6rem;
         justify-content: space-between; } }
   footer a:hover {
     font-weight: bolder; }
