@@ -179,6 +179,12 @@ section {
       font-size: smaller;
       text-decoration: underline;
       text-underline-offset: 0.5rem; }
+  @media only screen and (min-width: 768px) {
+    section.testimonials {
+      display: flex;
+      justify-content: center; }
+      section.testimonials .card {
+        max-width: 20rem; } }
   section.testimonials img.quote {
     width: 1.5rem;
     margin: 0;
@@ -208,46 +214,70 @@ section {
     section.testimonials .card .profile {
       display: flex;
       align-items: center; }
-  section.access .access-card {
-    background: #202a3c;
-    margin: 1.5rem;
-    padding: 1.5rem; }
-  section.access form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; }
-    section.access form input {
-      font-size: 0.7rem;
-      margin: 1.6rem 0; }
+  section.access {
+    padding: 0 3rem; }
+    section.access .access-card {
+      background: #202a3c;
+      max-width: 54rem;
+      margin: 0 auto;
+      padding: 1.5rem;
+      position: relative;
+      bottom: -10rem; }
+      section.access .access-card form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto; }
+        section.access .access-card form input {
+          font-size: 0.7rem;
+          margin: 1.6rem 0; }
+        @media only screen and (min-width: 768px) {
+          section.access .access-card form {
+            flex-direction: row; }
+            section.access .access-card form input {
+              flex-grow: 2;
+              margin-right: 2rem; } }
+      @media only screen and (min-width: 768px) {
+        section.access .access-card {
+          padding: 2rem 4rem 1rem; } }
 
 footer {
-  display: flex;
-  flex-direction: column;
-  background: #0b1523;
   text-align: left;
-  padding: 3rem; }
+  padding: 20rem 3rem 3rem;
+  background: #0b1523; }
   footer img {
     width: 13rem;
     margin-bottom: 3rem; }
-  footer .footer-1 {
+  footer .footer-wrapper {
     display: flex;
-    margin-bottom: 0; }
-    footer .footer-1 p {
-      margin-top: 0; }
-    footer .footer-1 .fas {
-      margin: 0.4rem 2rem 0 0; }
-  footer .footer-2 .fas {
-    margin-right: 1rem; }
-  footer > div {
-    margin-bottom: 5rem; }
-  footer ul li {
-    margin: 1rem 0; }
-  footer .footer-5 {
-    text-align: center;
-    font-size: 1.8rem; }
-    footer .footer-5 .fab {
-      margin: 0 0.2rem; }
+    flex-direction: column;
+    text-align: left;
+    margin-top: 1rem; }
+    @media only screen and (min-width: 768px) {
+      footer .footer-wrapper {
+        display: grid;
+        grid-template-columns: 3fr 2fr 1fr 1fr 1fr;
+        gap: 2rem;
+        justify-content: space-between; } }
+    footer .footer-wrapper .footer-1 {
+      display: flex;
+      margin-bottom: 0; }
+      footer .footer-wrapper .footer-1 p {
+        margin-top: 0; }
+      footer .footer-wrapper .footer-1 .fas {
+        margin: 0.4rem 2rem 0 0; }
+    footer .footer-wrapper .footer-2 .fas {
+      margin-right: 1rem; }
+    footer .footer-wrapper > div {
+      margin-bottom: 5rem; }
+    footer .footer-wrapper ul li {
+      margin: 0; }
+    footer .footer-wrapper .footer-5 {
+      text-align: center;
+      font-size: 1.8rem; }
+      footer .footer-wrapper .footer-5 .fab {
+        margin: 0 0.2rem; }
 
 button,
 input {

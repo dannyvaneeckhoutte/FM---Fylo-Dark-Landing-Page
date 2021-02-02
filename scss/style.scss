@@ -132,7 +132,13 @@ section {
     }
   }
   &.testimonials {
-    // background-color: $Light-Red;
+    @media only screen and (min-width: 768px) {
+      display: flex;
+      justify-content: center;
+      .card {
+        max-width: 20rem;
+      }
+    }
     img.quote {
       width: 1.5rem;
       margin: 0;
@@ -171,62 +177,89 @@ section {
     }
   }
   &.access {
+    padding: 0 3rem;
     .access-card {
       background: $Dark-Blue-bg-testimonials;
-      margin: 1.5rem;
+      max-width: 54rem;
+      margin: 0 auto;
       padding: 1.5rem;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      input {
-        font-size: 0.7rem;
-        margin: 1.6rem 0;
+      position: relative;
+      bottom: -10rem;
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        input {
+          font-size: 0.7rem;
+          margin: 1.6rem 0;
+        }
+        @media only screen and (min-width: 768px) {
+          // width: 30rem;
+          flex-direction: row;
+          input {
+            flex-grow: 2;
+            margin-right: 2rem;
+          }
+        }
+      }
+      @media only screen and (min-width: 768px) {
+        padding: 2rem 4rem 1rem;
       }
     }
   }
 }
 
 footer {
-  display: flex;
-  flex-direction: column;
-  background: $Dark-Blue-bg-footer;
   text-align: left;
-  padding: 3rem;
+  padding: 20rem 3rem 3rem;
+  background: $Dark-Blue-bg-footer;
   img {
     width: 13rem;
     margin-bottom: 3rem;
   }
-  .footer-1 {
+  .footer-wrapper {
     display: flex;
-    margin-bottom: 0;
-    p {
-      margin-top: 0;
+    flex-direction: column;
+    text-align: left;
+    margin-top: 1rem;
+    @media only screen and (min-width: 768px) {
+      display: grid;
+      grid-template-columns: 3fr 2fr 1fr 1fr 1fr;
+      gap: 2rem;
+      justify-content: space-between;
     }
-    .fas {
-      margin: 0.4rem 2rem 0 0;
+
+    .footer-1 {
+      display: flex;
+      margin-bottom: 0;
+      p {
+        margin-top: 0;
+      }
+      .fas {
+        margin: 0.4rem 2rem 0 0;
+      }
     }
-  }
-  .footer-2 {
-    .fas {
-      margin-right: 1rem;
+    .footer-2 {
+      .fas {
+        margin-right: 1rem;
+      }
     }
-  }
-  > div {
-    margin-bottom: 5rem;
-  }
-  ul {
-    li {
-      margin: 1rem 0;
+    > div {
+      margin-bottom: 5rem;
     }
-  }
-  .footer-5 {
-    text-align: center;
-    font-size: 1.8rem;
-    .fab {
-      margin: 0 0.2rem;
+    ul {
+      li {
+        margin: 0;
+      }
+    }
+    .footer-5 {
+      text-align: center;
+      font-size: 1.8rem;
+      .fab {
+        margin: 0 0.2rem;
+      }
     }
   }
 }
