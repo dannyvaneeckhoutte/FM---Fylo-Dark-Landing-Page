@@ -23,7 +23,7 @@ $Light-Red: hsl(0, 100%, 63%);
 $White: hsl(0, 0%, 100%);
 
 body {
-  background: $Dark-Blue-bg-intro;
+  background: $Dark-Blue-bg-main;
   color: $White;
   font-family: $font-body;
   text-align: center;
@@ -47,18 +47,14 @@ h3 {
   font-size: 0.7rem;
 }
 
-main {
-  background-color: $Dark-Blue-bg-main;
-}
-
 nav {
-  background: $Dark-Blue-bg-intro;
+  //   background: $Dark-Blue-bg-intro;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.8rem 1.4rem;
   @media only screen and (min-width: 768px) {
-    padding: 3.5rem;
+    padding: 2.4rem;
   }
   img {
     width: 5.7rem;
@@ -66,9 +62,14 @@ nav {
   ul {
     display: flex;
     li {
-      margin-left: 1.6rem;
+      padding-left: 1.6rem;
       a {
         font-size: smaller;
+        display: inline-block;
+        &:hover {
+          text-decoration: underline;
+          font-weight: bolder;
+        }
       }
     }
   }
@@ -95,117 +96,120 @@ section {
   padding: 1.5rem;
 }
 
-section {
-  padding: 6rem 2rem;
-  background: $Dark-Blue-bg-main;
-  &.features {
-    @media only screen and (min-width: 768px) {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-      max-width: 60%;
-      margin: 0 auto;
-    }
-    .features-card {
-      margin-bottom: 5rem;
-      img {
-        height: 4.2rem;
+main {
+  max-width: 1440px;
+  margin: 0 auto;
+  section {
+    padding: 6rem 2rem;
+    &.features {
+      @media only screen and (min-width: 768px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+        max-width: 60%;
+        margin: 0 auto;
+      }
+      .features-card {
+        margin-bottom: 5rem;
+        img {
+          height: 4.2rem;
+        }
       }
     }
-  }
-  &.productivity {
-    text-align: left;
-    @media only screen and (min-width: 768px) {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      justify-content: center;
-      align-items: center;
-      margin: 0 auto;
-      max-width: 80%;
-    }
-    a {
-      color: $link-green;
-      font-size: smaller;
-      text-decoration: underline;
-      text-underline-offset: 0.5rem;
-    }
-  }
-  &.testimonials {
-    @media only screen and (min-width: 768px) {
-      display: flex;
-      justify-content: center;
-      .card {
-        max-width: 20rem;
-      }
-    }
-    img.quote {
-      width: 1.5rem;
-      margin: 0;
-      padding: 0;
-      position: relative;
-      left: -1rem;
-      top: -1.3rem;
-    }
-    .card {
-      background: $Dark-Blue-bg-testimonials;
-      padding: 1rem 1.5rem 0.8rem;
-      margin: 0 1.8rem 1.8rem;
-      border-radius: 0.3rem;
+    &.productivity {
       text-align: left;
-      font-size: 0.7rem;
-      p {
-        line-height: 1.8;
-        margin-top: 0;
-      }
-      h3 {
-        margin-bottom: 0;
-      }
-      &:first-of-type {
-        padding-top: 0rem;
-      }
-      img.profile-img {
-        width: 2rem;
-        height: 2rem;
-        border-radius: 1rem;
-        margin-right: 0.6rem;
-      }
-      .profile {
-        display: flex;
-        align-items: center;
-      }
-    }
-  }
-  &.access {
-    padding: 0 3rem;
-    .access-card {
-      background: $Dark-Blue-bg-testimonials;
-      max-width: 54rem;
-      margin: 0 auto;
-      padding: 1.5rem;
-      position: relative;
-      bottom: -10rem;
-      form {
-        display: flex;
-        flex-direction: column;
+      @media only screen and (min-width: 768px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
         justify-content: center;
         align-items: center;
         margin: 0 auto;
-        input {
-          font-size: 0.7rem;
-          margin: 1.6rem 0;
-        }
-        @media only screen and (min-width: 768px) {
-          // width: 30rem;
-          flex-direction: row;
-          input {
-            flex-grow: 2;
-            margin-right: 2rem;
-          }
+        max-width: 80%;
+      }
+      a {
+        color: $link-green;
+        font-size: smaller;
+        text-decoration: underline;
+        text-underline-offset: 0.5rem;
+      }
+    }
+    &.testimonials {
+      @media only screen and (min-width: 768px) {
+        display: flex;
+        justify-content: center;
+        .card {
+          max-width: 20rem;
         }
       }
-      @media only screen and (min-width: 768px) {
-        padding: 2rem 4rem 1rem;
+      img.quote {
+        width: 1.5rem;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        left: -1rem;
+        top: -1.3rem;
+      }
+      .card {
+        background: $Dark-Blue-bg-testimonials;
+        padding: 1rem 1.5rem 0.8rem;
+        margin: 0 1.8rem 1.8rem;
+        border-radius: 0.3rem;
+        text-align: left;
+        font-size: 0.7rem;
+        p {
+          line-height: 1.8;
+          margin-top: 0;
+        }
+        h3 {
+          margin-bottom: 0;
+        }
+        &:first-of-type {
+          padding-top: 0rem;
+        }
+        img.profile-img {
+          width: 2rem;
+          height: 2rem;
+          border-radius: 1rem;
+          margin-right: 0.6rem;
+        }
+        .profile {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+    &.access {
+      padding: 0 3rem;
+      .access-card {
+        background: $Dark-Blue-bg-testimonials;
+        max-width: 54rem;
+        margin: 0 auto;
+        padding: 1.5rem;
+        position: relative;
+        bottom: -10rem;
+        form {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin: 0 auto;
+          input {
+            font-size: 0.7rem;
+            margin: 1.6rem 0;
+          }
+          @media only screen and (min-width: 768px) {
+            // width: 30rem;
+            flex-direction: row;
+            input {
+              flex-grow: 2;
+              margin-right: 2rem;
+            }
+          }
+        }
+        @media only screen and (min-width: 768px) {
+          padding: 2rem 4rem 1rem;
+        }
       }
     }
   }
@@ -215,22 +219,21 @@ footer {
   text-align: left;
   padding: 20rem 3rem 3rem;
   background: $Dark-Blue-bg-footer;
-  img {
-    width: 13rem;
-    margin-bottom: 3rem;
+  .footer-content {
+    @media only screen and (min-width: 1440px) {
+      max-width: 1440px;
+      margin: 0 auto;
+    }
   }
   .footer-wrapper {
     display: flex;
     flex-direction: column;
     text-align: left;
     margin-top: 1rem;
-    @media only screen and (min-width: 768px) {
-      display: grid;
-      grid-template-columns: 3fr 2fr 1fr 1fr 1fr;
-      gap: 2rem;
-      justify-content: space-between;
+    img {
+      width: 13rem;
+      margin-bottom: 3rem;
     }
-
     .footer-1 {
       display: flex;
       margin-bottom: 0;
@@ -261,6 +264,18 @@ footer {
         margin: 0 0.2rem;
       }
     }
+
+    @media only screen and (min-width: 768px) {
+      display: grid;
+      grid-template-columns: 3fr 2fr 1fr 1fr 1fr;
+      gap: 2rem;
+      justify-content: space-between;
+    }
+  }
+  a {
+    &:hover {
+      font-weight: bolder;
+    }
   }
 }
 
@@ -277,4 +292,9 @@ input {
 }
 button {
   background: $gradient;
+  cursor: pointer;
+  transition: all 0.1s;
+  &:hover {
+    background: $link-green;
+  }
 }

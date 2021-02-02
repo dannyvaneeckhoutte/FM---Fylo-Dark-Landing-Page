@@ -88,7 +88,7 @@ legend {
   height: auto; }
 
 body {
-  background: #1c2431;
+  background: #181f2a;
   color: white;
   font-family: "Open Sans", sans-serif;
   text-align: center;
@@ -108,26 +108,26 @@ h2 {
 h3 {
   font-size: 0.7rem; }
 
-main {
-  background-color: #181f2a; }
-
 nav {
-  background: #1c2431;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.8rem 1.4rem; }
   @media only screen and (min-width: 768px) {
     nav {
-      padding: 3.5rem; } }
+      padding: 2.4rem; } }
   nav img {
     width: 5.7rem; }
   nav ul {
     display: flex; }
     nav ul li {
-      margin-left: 1.6rem; }
+      padding-left: 1.6rem; }
       nav ul li a {
-        font-size: smaller; }
+        font-size: smaller;
+        display: inline-block; }
+        nav ul li a:hover {
+          text-decoration: underline;
+          font-weight: bolder; }
 
 header {
   background-image: url(../images/bg-curvy-mobile.svg);
@@ -149,117 +149,117 @@ header,
 section {
   padding: 1.5rem; }
 
-section {
-  padding: 6rem 2rem;
-  background: #181f2a; }
-  @media only screen and (min-width: 768px) {
-    section.features {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-      max-width: 60%;
-      margin: 0 auto; } }
-  section.features .features-card {
-    margin-bottom: 5rem; }
-    section.features .features-card img {
-      height: 4.2rem; }
-  section.productivity {
-    text-align: left; }
+main {
+  max-width: 1440px;
+  margin: 0 auto; }
+  main section {
+    padding: 6rem 2rem; }
     @media only screen and (min-width: 768px) {
-      section.productivity {
+      main section.features {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-        max-width: 80%; } }
-    section.productivity a {
-      color: #65e2d9;
-      font-size: smaller;
-      text-decoration: underline;
-      text-underline-offset: 0.5rem; }
-  @media only screen and (min-width: 768px) {
-    section.testimonials {
-      display: flex;
-      justify-content: center; }
-      section.testimonials .card {
-        max-width: 20rem; } }
-  section.testimonials img.quote {
-    width: 1.5rem;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    left: -1rem;
-    top: -1.3rem; }
-  section.testimonials .card {
-    background: #202a3c;
-    padding: 1rem 1.5rem 0.8rem;
-    margin: 0 1.8rem 1.8rem;
-    border-radius: 0.3rem;
-    text-align: left;
-    font-size: 0.7rem; }
-    section.testimonials .card p {
-      line-height: 1.8;
-      margin-top: 0; }
-    section.testimonials .card h3 {
-      margin-bottom: 0; }
-    section.testimonials .card:first-of-type {
-      padding-top: 0rem; }
-    section.testimonials .card img.profile-img {
-      width: 2rem;
-      height: 2rem;
-      border-radius: 1rem;
-      margin-right: 0.6rem; }
-    section.testimonials .card .profile {
-      display: flex;
-      align-items: center; }
-  section.access {
-    padding: 0 3rem; }
-    section.access .access-card {
-      background: #202a3c;
-      max-width: 54rem;
-      margin: 0 auto;
-      padding: 1.5rem;
-      position: relative;
-      bottom: -10rem; }
-      section.access .access-card form {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto; }
-        section.access .access-card form input {
-          font-size: 0.7rem;
-          margin: 1.6rem 0; }
-        @media only screen and (min-width: 768px) {
-          section.access .access-card form {
-            flex-direction: row; }
-            section.access .access-card form input {
-              flex-grow: 2;
-              margin-right: 2rem; } }
+        gap: 5rem;
+        max-width: 60%;
+        margin: 0 auto; } }
+    main section.features .features-card {
+      margin-bottom: 5rem; }
+      main section.features .features-card img {
+        height: 4.2rem; }
+    main section.productivity {
+      text-align: left; }
       @media only screen and (min-width: 768px) {
-        section.access .access-card {
-          padding: 2rem 4rem 1rem; } }
+        main section.productivity {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 4rem;
+          justify-content: center;
+          align-items: center;
+          margin: 0 auto;
+          max-width: 80%; } }
+      main section.productivity a {
+        color: #65e2d9;
+        font-size: smaller;
+        text-decoration: underline;
+        text-underline-offset: 0.5rem; }
+    @media only screen and (min-width: 768px) {
+      main section.testimonials {
+        display: flex;
+        justify-content: center; }
+        main section.testimonials .card {
+          max-width: 20rem; } }
+    main section.testimonials img.quote {
+      width: 1.5rem;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      left: -1rem;
+      top: -1.3rem; }
+    main section.testimonials .card {
+      background: #202a3c;
+      padding: 1rem 1.5rem 0.8rem;
+      margin: 0 1.8rem 1.8rem;
+      border-radius: 0.3rem;
+      text-align: left;
+      font-size: 0.7rem; }
+      main section.testimonials .card p {
+        line-height: 1.8;
+        margin-top: 0; }
+      main section.testimonials .card h3 {
+        margin-bottom: 0; }
+      main section.testimonials .card:first-of-type {
+        padding-top: 0rem; }
+      main section.testimonials .card img.profile-img {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 1rem;
+        margin-right: 0.6rem; }
+      main section.testimonials .card .profile {
+        display: flex;
+        align-items: center; }
+    main section.access {
+      padding: 0 3rem; }
+      main section.access .access-card {
+        background: #202a3c;
+        max-width: 54rem;
+        margin: 0 auto;
+        padding: 1.5rem;
+        position: relative;
+        bottom: -10rem; }
+        main section.access .access-card form {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin: 0 auto; }
+          main section.access .access-card form input {
+            font-size: 0.7rem;
+            margin: 1.6rem 0; }
+          @media only screen and (min-width: 768px) {
+            main section.access .access-card form {
+              flex-direction: row; }
+              main section.access .access-card form input {
+                flex-grow: 2;
+                margin-right: 2rem; } }
+        @media only screen and (min-width: 768px) {
+          main section.access .access-card {
+            padding: 2rem 4rem 1rem; } }
 
 footer {
   text-align: left;
   padding: 20rem 3rem 3rem;
   background: #0b1523; }
-  footer img {
-    width: 13rem;
-    margin-bottom: 3rem; }
+  @media only screen and (min-width: 1440px) {
+    footer .footer-content {
+      max-width: 1440px;
+      margin: 0 auto; } }
   footer .footer-wrapper {
     display: flex;
     flex-direction: column;
     text-align: left;
     margin-top: 1rem; }
-    @media only screen and (min-width: 768px) {
-      footer .footer-wrapper {
-        display: grid;
-        grid-template-columns: 3fr 2fr 1fr 1fr 1fr;
-        gap: 2rem;
-        justify-content: space-between; } }
+    footer .footer-wrapper img {
+      width: 13rem;
+      margin-bottom: 3rem; }
     footer .footer-wrapper .footer-1 {
       display: flex;
       margin-bottom: 0; }
@@ -278,6 +278,14 @@ footer {
       font-size: 1.8rem; }
       footer .footer-wrapper .footer-5 .fab {
         margin: 0 0.2rem; }
+    @media only screen and (min-width: 768px) {
+      footer .footer-wrapper {
+        display: grid;
+        grid-template-columns: 3fr 2fr 1fr 1fr 1fr;
+        gap: 2rem;
+        justify-content: space-between; } }
+  footer a:hover {
+    font-weight: bolder; }
 
 button,
 input {
@@ -291,4 +299,8 @@ input {
     font-weight: 700; }
 
 button {
-  background: linear-gradient(155deg, #65e2d9 0%, #339ecc 100%); }
+  background: linear-gradient(155deg, #65e2d9 0%, #339ecc 100%);
+  cursor: pointer;
+  transition: all 0.1s; }
+  button:hover {
+    background: #65e2d9; }
