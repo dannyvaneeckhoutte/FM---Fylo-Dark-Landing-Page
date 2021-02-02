@@ -1,4 +1,4 @@
-# ![Visit the live site here](https://fylo-dark-landing-page-omega.vercel.app)
+# [Visit the live site here](https://fylo-dark-landing-page-omega.vercel.app)
 
 ## Frontend Mentor - Fylo landing page with dark theme and features grid
 
